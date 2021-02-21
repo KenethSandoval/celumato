@@ -1,8 +1,7 @@
 #ifndef CELUMATO_H_
 #define CELUMATO_H_
 
-#include <SDL/SDL.h>
-#include <math.h>
+#include <SDL.h>
 
 int scc(int code) {
   if(code < 0) {
