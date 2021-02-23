@@ -1,8 +1,8 @@
 GL_PKGS=sdl2
 
 CFLAGS=-Wall -Wextra -std=c11 -pedantic
-all: gol
+all: rule110
 
-gol: gol.c
-	$(CC) $(CFLAGS) `pkg-config --cflags $(GL_PKGS)` -o gol.out gol.c `pkg-config --libs $(GL_PKGS)` -lm
+rule110: rule110.c
+	$(CC) $(CFLAGS) `pkg-config --cflags $(GL_PKGS)` -o rule110 rule110.c `pkg-config --libs $(GL_PKGS)` -lm
 
