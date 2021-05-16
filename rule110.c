@@ -10,9 +10,9 @@ typedef enum {
    I = 1,
 } Cell;
 
-uint32_t cell_color[2] = {
+Uint32 cell_color[2] = {
   [O] = 0x00000000,
-  [I] = 0xFFAABBFF,
+  [I] = 0xFFFFFFFF,
 };
 
 #define PATTERN(A, B, C) ((A << 2) | (B << 1) | C)
@@ -115,7 +115,7 @@ int main() {
  
   bool quit = false;
 
-  //board_push_row(&board, random_row());
+  board_push_row(&board, random_row());
 
   while(!quit) {
     SDL_Event event;

@@ -1,7 +1,7 @@
 #ifndef CELUMATO_H_
 #define CELUMATO_H_
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 int scc(int code) {
   if(code < 0) {
@@ -34,12 +34,21 @@ void *scp(void *ptr) {
 #define CELL_WIDTH ((float) SCREEN_WIDTH / (float) COLS)
 #define CELL_HEIGHT ((float) SCREEN_HEIGHT / (float)ROWS)
 
-SDL_Window *celumato_create_window(void) {
+/*
+ *
   return scp(SDL_CreateWindow(
           "Celumato",
           0,0,
           SCREEN_WIDTH, SCREEN_HEIGHT,
           SDL_WINDOW_RESIZABLE));
+ * */
+SDL_Window *celumato_create_window(void) {
+  return scp(SDL_CreateWindow(
+          "Celumato",
+          SCREEN_WIDTH, SCREEN_HEIGHT,
+          0,0,
+          SDL_WINDOW_RESIZABLE
+        ));
 }
 
 SDL_Renderer *celumato_create_renderer(SDL_Window * window) {
